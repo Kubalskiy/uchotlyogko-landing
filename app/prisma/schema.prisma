@@ -1,0 +1,74 @@
+// This is your Prisma schema file
+// https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ──────────────────────────────────────────
+// Core domain models (skeleton — expand in DIG-3+)
+// ──────────────────────────────────────────
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  companies CompanyMember[]
+}
+
+model Company {
+  id        String   @id @default(cuid())
+  name      String
+  inn       String?  @unique // Russian taxpayer ID
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  members      CompanyMember[]
+  transactions Transaction[]
+}
+
+model CompanyMember {
+  id        String   @id @default(cuid())
+  userId    String
+  companyId String
+  role      Role     @default(OWNER)
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id])
+  company Company @relation(fields: [companyId], references: [id])
+
+  @@unique([userId, companyId])
+}
+
+model Transaction {
+  id          String          @id @default(cuid())
+  companyId   String
+  type        TransactionType
+  amount      Decimal         @db.Decimal(15, 2)
+  currency    String          @default("RUB")
+  description String?
+  date        DateTime
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  company Company @relation(fields: [companyId], references: [id])
+}
+
+enum Role {
+  OWNER
+  ACCOUNTANT
+  VIEWER
+}
+
+enum TransactionType {
+  INCOME
+  EXPENSE
+}
