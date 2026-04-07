@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>УчётЛёгко — простая бухгалтерия для малого бизнеса</title>
-  <meta name="description" content="Простой и доступный онлайн-учёт для малого бизнеса. Ведите бухгалтерию без бухгалтера." />
+  <meta name="description" content="Ведите бухгалтерию без бухгалтера. Учёт доходов и расходов, счета, отчёты и налоговый календарь — всё в одном сервисе от ₽990/мес." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,7 +15,15 @@
   <nav class="navbar">
     <div class="container nav-inner">
       <div class="logo">УчётЛёгко</div>
+      <ul class="nav-links">
+        <li><a href="#how">Как работает</a></li>
+        <li><a href="#features">Возможности</a></li>
+        <li><a href="#pricing">Тарифы</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
       <a href="#waitlist" class="btn btn-nav">Начать бесплатно</a>
+      <button class="nav-toggle" aria-label="Меню" onclick="toggleMenu()">☰</button>
     </div>
   </nav>
 
@@ -23,16 +31,20 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
-        <span class="badge">Для малого бизнеса</span>
+        <span class="badge">🎁 Акция: 3 месяца «Бизнес» бесплатно при регистрации</span>
         <h1>Бухгалтерия без&nbsp;головной&nbsp;боли</h1>
         <p class="hero-sub">
-          Автоматизируйте учёт доходов и расходов, формируйте отчёты и контролируйте финансы&nbsp;— всё в одном простом сервисе. Без бухгалтера. Без лишних затрат.
+          Автоматизируйте учёт доходов и расходов, выставляйте счета и формируйте отчёты — всё в одном простом сервисе. Без бухгалтера. Без лишних затрат.
         </p>
         <div class="hero-cta">
-          <a href="#waitlist" class="btn btn-primary">Попробовать бесплатно</a>
-          <a href="#features" class="btn btn-ghost">Узнать больше</a>
+          <a href="#waitlist" class="btn btn-primary btn-lg">Попробовать бесплатно →</a>
+          <a href="#how" class="btn btn-ghost">Как это работает</a>
         </div>
-        <p class="hero-note">✓ Бесплатный тариф навсегда &nbsp;·&nbsp; ✓ Нет скрытых платежей &nbsp;·&nbsp; ✓ Настройка за 5 минут</p>
+        <div class="hero-trust">
+          <span>✓ Бесплатный тариф навсегда</span>
+          <span>✓ Без скрытых платежей</span>
+          <span>✓ Настройка за 5 минут</span>
+        </div>
       </div>
       <div class="hero-visual">
         <div class="dashboard-card">
@@ -68,23 +80,98 @@
               <div class="bar active" style="height:95%"><span>Апр</span></div>
             </div>
           </div>
+          <div class="dash-latest">
+            <div class="latest-title">Последние операции</div>
+            <div class="tx tx-income"><span>Оплата от ООО «Ромашка»</span><span>+₽ 45 000</span></div>
+            <div class="tx tx-expense"><span>Аренда офиса</span><span>−₽ 18 000</span></div>
+            <div class="tx tx-income"><span>Продажа товара</span><span>+₽ 12 400</span></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Social proof -->
+  <!-- Social proof ticker -->
   <div class="social-proof">
-    <div class="container">
-      <p>Уже доверяют <strong>1 200+</strong> предпринимателей по всей стране</p>
+    <div class="container sp-inner">
+      <div class="sp-stat"><strong>1 200+</strong><span>предпринимателей</span></div>
+      <div class="sp-divider"></div>
+      <div class="sp-stat"><strong>4.9 ★</strong><span>средняя оценка</span></div>
+      <div class="sp-divider"></div>
+      <div class="sp-stat"><strong>₽ 2.1 млрд</strong><span>учтено операций</span></div>
+      <div class="sp-divider"></div>
+      <div class="sp-stat"><strong>15 мин</strong><span>среднее время старта</span></div>
     </div>
   </div>
+
+  <!-- How it works -->
+  <section class="how" id="how">
+    <div class="container">
+      <h2>Три шага до порядка в финансах</h2>
+      <p class="section-sub">Не нужно быть бухгалтером. Зарегистрируйтесь, внесите первую операцию и получите полную картину своего бизнеса.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-icon">🚀</div>
+          <h3>Регистрация за 2 минуты</h3>
+          <p>Укажите email, выберите форму бизнеса (ИП, ООО, самозанятый) — и вы уже внутри. Никаких бумаг и звонков.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-icon">📥</div>
+          <h3>Внесите данные или загрузите выписку</h3>
+          <p>Вводите операции вручную или загрузите банковскую выписку. Категории расставляются автоматически.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-icon">📊</div>
+          <h3>Получите полную картину</h3>
+          <p>Смотрите отчёты, контролируйте прибыль, не пропускайте налоги. Всё всегда под рукой.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VS block (commercial argument) -->
+  <section class="vs-section">
+    <div class="container">
+      <h2>Зачем платить бухгалтеру ₽50 000/мес?</h2>
+      <p class="section-sub">УчётЛёгко делает всё то же самое — быстрее, дешевле и доступно 24/7.</p>
+      <div class="vs-table">
+        <div class="vs-col vs-them">
+          <div class="vs-header">Штатный бухгалтер</div>
+          <ul>
+            <li class="bad">от ₽ 40 000/мес зарплата</li>
+            <li class="bad">Больничные, отпуска, замена</li>
+            <li class="bad">Работает только в рабочее время</li>
+            <li class="bad">Нет мгновенных отчётов</li>
+            <li class="bad">Риск человеческой ошибки</li>
+            <li class="bad">Документы в Excel-таблицах</li>
+          </ul>
+        </div>
+        <div class="vs-col vs-us">
+          <div class="vs-header">УчётЛёгко <span class="vs-badge">Выгоднее в 40×</span></div>
+          <ul>
+            <li class="good">от ₽ 990/мес — всё включено</li>
+            <li class="good">Работает 24/7 без выходных</li>
+            <li class="good">Отчёты в один клик в любое время</li>
+            <li class="good">Автоматическая категоризация</li>
+            <li class="good">Налоговый календарь и напоминания</li>
+            <li class="good">Все данные в облаке — всегда доступны</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-primary btn-full" style="margin-top:24px;">Сэкономить сейчас →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Features -->
   <section class="features" id="features">
     <div class="container">
-      <h2>Всё необходимое для вашего бизнеса</h2>
-      <p class="section-sub">Мы убрали всё лишнее и оставили только то, что нужно малому бизнесу каждый день</p>
+      <h2>Всё необходимое — в одном окне</h2>
+      <p class="section-sub">Мы убрали всё лишнее и оставили только то, что малый бизнес использует каждый день</p>
       <div class="feature-grid">
 
         <div class="feature-card">
@@ -123,55 +210,206 @@
           <p>Полнофункциональная мобильная версия. Управляйте финансами в любом месте и в любое время.</p>
         </div>
 
+        <div class="feature-card">
+          <div class="feature-icon">🏦</div>
+          <h3>Интеграция с банком</h3>
+          <p>Автоматическая синхронизация с ведущими банками России. Сбербанк, Тинькофф, Альфа и другие.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Несколько пользователей</h3>
+          <p>Дайте доступ бухгалтеру или партнёру с разными уровнями прав. Управляйте командой.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Поддержка 7 дней в неделю</h3>
+          <p>Живой чат, email и база знаний. Отвечаем за 2 часа в рабочие дни и за 4 часа в выходные.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Pricing teaser -->
+  <!-- Pricing -->
   <section class="pricing" id="pricing">
     <div class="container">
       <h2>Простые и прозрачные тарифы</h2>
       <p class="section-sub">Начните бесплатно. Платите только когда ваш бизнес вырастет.</p>
+      <div class="pricing-toggle">
+        <span class="tog-label active" id="togMonthly" onclick="setAnnual(false)">Ежемесячно</span>
+        <div class="toggle-switch" onclick="setAnnual(!annualMode)">
+          <div class="toggle-knob" id="togKnob"></div>
+        </div>
+        <span class="tog-label" id="togAnnual" onclick="setAnnual(true)">Ежегодно <em class="save-badge">−20%</em></span>
+      </div>
       <div class="pricing-grid">
 
         <div class="pricing-card">
           <div class="plan-name">Бесплатный</div>
-          <div class="plan-price">₽ 0 <span>/мес</span></div>
+          <div class="plan-price" id="price-free">₽ 0 <span>/мес</span></div>
           <ul class="plan-features">
             <li>✓ До 50 операций в месяц</li>
             <li>✓ Учёт доходов и расходов</li>
             <li>✓ 2 выставленных счёта</li>
             <li>✓ Базовые отчёты</li>
+            <li class="muted">✗ Интеграция с банком</li>
+            <li class="muted">✗ Налоговый календарь</li>
           </ul>
-          <a href="#waitlist" class="btn btn-outline">Начать бесплатно</a>
+          <a href="#waitlist" class="btn btn-outline btn-full">Начать бесплатно</a>
         </div>
 
         <div class="pricing-card featured">
           <div class="plan-badge">Популярный</div>
           <div class="plan-name">Бизнес</div>
-          <div class="plan-price">₽ 990 <span>/мес</span></div>
+          <div class="plan-price" id="price-biz">₽ 990 <span>/мес</span></div>
+          <div class="plan-trial">14 дней бесплатно · без карты</div>
           <ul class="plan-features">
             <li>✓ Неограниченные операции</li>
-            <li>✓ Все отчёты и экспорт</li>
-            <li>✓ Неограниченные счета</li>
+            <li>✓ Все отчёты и экспорт (PDF / Excel)</li>
+            <li>✓ Неограниченные счета и акты</li>
             <li>✓ Налоговый календарь</li>
             <li>✓ Интеграция с банком</li>
             <li>✓ Приоритетная поддержка</li>
           </ul>
-          <a href="#waitlist" class="btn btn-primary">Попробовать 14 дней бесплатно</a>
+          <a href="#waitlist" class="btn btn-primary btn-full">Попробовать 14 дней бесплатно</a>
         </div>
 
         <div class="pricing-card">
           <div class="plan-name">Команда</div>
-          <div class="plan-price">₽ 2 490 <span>/мес</span></div>
+          <div class="plan-price" id="price-team">₽ 2 490 <span>/мес</span></div>
           <ul class="plan-features">
             <li>✓ Всё из тарифа «Бизнес»</li>
             <li>✓ До 5 пользователей</li>
             <li>✓ Несколько компаний</li>
             <li>✓ API-доступ</li>
             <li>✓ Персональный менеджер</li>
+            <li>✓ Обучение команды</li>
           </ul>
-          <a href="#waitlist" class="btn btn-outline">Выбрать тариф</a>
+          <a href="#waitlist" class="btn btn-outline btn-full">Выбрать тариф</a>
+        </div>
+
+      </div>
+      <p class="pricing-note">💳 Оплата картой, СБП или по счёту для юридических лиц. Отменить подписку можно в любой момент.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2>Нам доверяют предприниматели</h2>
+      <p class="section-sub">Реальные отзывы от владельцев малого бизнеса</p>
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Раньше я вёл всё в Excel и постоянно путался. Теперь захожу утром, вижу всю картину за минуту. Сэкономил на бухгалтере больше 400 000 рублей за год.»</p>
+          <div class="review-author">
+            <div class="review-avatar">АК</div>
+            <div>
+              <div class="review-name">Алексей Кузнецов</div>
+              <div class="review-role">ИП, интернет-магазин электроники, Москва</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Я самозанятый дизайнер — бухгалтерия была для меня чёрным ящиком. УчётЛёгко объяснил всё понятным языком. Теперь сам плачу налоги и не боюсь проверок.»</p>
+          <div class="review-author">
+            <div class="review-avatar">МС</div>
+            <div>
+              <div class="review-name">Мария Смирнова</div>
+              <div class="review-role">Самозанятый, графический дизайн, Санкт-Петербург</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">«Открыл ООО три месяца назад. Боялся, что бухгалтерия будет сложной. Оказалось — нет. Интеграция с Тинькофф работает как часы, операции загружаются сами.»</p>
+          <div class="review-author">
+            <div class="review-avatar">ДВ</div>
+            <div>
+              <div class="review-name">Дмитрий Волков</div>
+              <div class="review-role">ООО, строительные услуги, Екатеринбург</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container faq-inner">
+      <div class="faq-head">
+        <h2>Часто задаваемые вопросы</h2>
+        <p>Не нашли ответ? Напишите нам — ответим за 2 часа.</p>
+        <a href="mailto:hello@uchotlyogko.ru" class="btn btn-ghost faq-cta">Написать в поддержку</a>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Подходит ли сервис для самозанятых?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            Да. УчётЛёгко поддерживает все формы бизнеса: ИП (УСН, патент, ОСНО), ООО и самозанятых. Для самозанятых есть отдельный упрощённый режим с интеграцией с приложением «Мой налог».
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Нужно ли устанавливать что-то на компьютер?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            Нет. УчётЛёгко — это полностью облачный сервис. Работает в любом браузере на компьютере, планшете или телефоне. Установка не требуется.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Как происходит интеграция с банком?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            Вы один раз авторизуете подключение вашего банка через API Open Banking. После этого все транзакции подгружаются автоматически — обычно раз в час. Поддерживаются Сбербанк, Тинькофф, Альфа-Банк, ВТБ, Точка и другие.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Мои данные в безопасности?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            Да. Все данные хранятся на серверах в России (соответствие 152-ФЗ), шифруются при передаче (TLS 1.3) и при хранении (AES-256). Резервные копии создаются каждые 6 часов. Мы не передаём ваши данные третьим лицам.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Могу ли я перенести данные из другой программы?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            Да. Поддерживается импорт из Excel/CSV, 1С (в формате XML) и загрузка банковских выписок. Если нужна помощь с миграцией — наша команда поможет бесплатно в течение первых 30 дней.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Что будет, если я передумаю?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            Отменить подписку можно в любой момент в личном кабинете — без звонков и объяснений. Доступ к данным сохраняется ещё 90 дней после отмены, и вы можете выгрузить всё в Excel.
+          </div>
         </div>
 
       </div>
@@ -182,18 +420,25 @@
   <section class="waitlist" id="waitlist">
     <div class="container waitlist-inner">
       <div class="waitlist-text">
-        <h2>Готовы упростить свою бухгалтерию?</h2>
-        <p>Присоединяйтесь к списку ожидания и получите ранний доступ + 3 месяца тарифа «Бизнес» бесплатно.</p>
+        <span class="waitlist-offer-badge">⏰ Ограниченное предложение</span>
+        <h2>Получите 3 месяца «Бизнес» бесплатно</h2>
+        <p>Зарегистрируйтесь сейчас и присоединитесь к списку ранних пользователей. Первые 500 участников получают расширенный тариф «Бизнес» бесплатно на 3 месяца.</p>
         <ul class="waitlist-perks">
-          <li>🎁 3 месяца «Бизнес» в подарок</li>
-          <li>⚡ Ранний доступ к новым функциям</li>
-          <li>💬 Прямой контакт с командой</li>
+          <li>🎁 3 месяца тарифа «Бизнес» в подарок (≈ ₽ 2 970)</li>
+          <li>⚡ Ранний доступ ко всем новым функциям</li>
+          <li>💬 Прямой контакт с командой основателей</li>
+          <li>🔒 Зафиксированная цена навсегда</li>
         </ul>
+        <div class="waitlist-counter">
+          <div class="counter-bar"><div class="counter-fill" style="width:74%"></div></div>
+          <p class="counter-text"><strong>372 из 500</strong> мест уже занято</p>
+        </div>
       </div>
       <div class="waitlist-form-wrap">
-        <form class="waitlist-form" onsubmit="handleSubmit(event)">
-          <input type="text" placeholder="Ваше имя" required />
-          <input type="email" placeholder="Email адрес" required />
+        <form class="waitlist-form" onsubmit="handleSubmit(event)" id="waitlistForm">
+          <h3 class="form-title">Получить ранний доступ</h3>
+          <input type="text" placeholder="Ваше имя" required autocomplete="name" />
+          <input type="email" placeholder="Email адрес" required autocomplete="email" />
           <input type="text" placeholder="Название компании (необязательно)" />
           <select>
             <option value="">Форма бизнеса</option>
@@ -202,13 +447,14 @@
             <option value="self">Самозанятый</option>
             <option value="other">Другое</option>
           </select>
-          <button type="submit" class="btn btn-primary btn-full">Получить ранний доступ →</button>
-          <p class="form-note">Нажимая кнопку, вы соглашаетесь с условиями использования. Никакого спама.</p>
+          <button type="submit" class="btn btn-primary btn-full btn-lg">Получить 3 месяца бесплатно →</button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">условиями использования</a>. Никакого спама.</p>
         </form>
         <div class="form-success" id="formSuccess" style="display:none;">
           <div class="success-icon">🎉</div>
           <h3>Вы в списке!</h3>
-          <p>Мы пришлём вам письмо, как только откроем доступ. Следите за почтой.</p>
+          <p>Мы пришлём письмо с доступом на ваш email. Среднее ожидание — <strong>2–3 дня</strong>.</p>
+          <p style="margin-top:12px;font-size:14px;color:#6b7280;">Пока ждёте — расскажите о нас другу и получите дополнительный бесплатный месяц.</p>
         </div>
       </div>
     </div>
@@ -220,12 +466,17 @@
       <div class="footer-brand">
         <div class="logo">УчётЛёгко</div>
         <p>Простая бухгалтерия для тех, кто строит бизнес, а не считает цифры.</p>
+        <div class="footer-socials">
+          <a href="#" title="Telegram">TG</a>
+          <a href="#" title="ВКонтакте">ВК</a>
+        </div>
       </div>
       <div class="footer-links">
         <div>
           <h4>Продукт</h4>
           <a href="#features">Возможности</a>
           <a href="#pricing">Тарифы</a>
+          <a href="#how">Как работает</a>
           <a href="#waitlist">Ранний доступ</a>
         </div>
         <div>
@@ -233,25 +484,29 @@
           <a href="#">О нас</a>
           <a href="#">Блог</a>
           <a href="#">Контакты</a>
+          <a href="#">Карьера</a>
         </div>
         <div>
           <h4>Правовое</h4>
           <a href="#">Условия использования</a>
           <a href="#">Политика конфиденциальности</a>
+          <a href="#">152-ФЗ</a>
+          <a href="#">Оферта</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2026 УчётЛёгко. Все права защищены.</p>
+        <p>© 2026 УчётЛёгко. Все права защищены. &nbsp;·&nbsp; ИНН 7700000000 &nbsp;·&nbsp; <a href="mailto:hello@uchotlyogko.ru">hello@uchotlyogko.ru</a></p>
       </div>
     </div>
   </footer>
 
   <script>
+    // Form submit
     function handleSubmit(e) {
       e.preventDefault();
-      document.querySelector('.waitlist-form').style.display = 'none';
+      document.getElementById('waitlistForm').style.display = 'none';
       document.getElementById('formSuccess').style.display = 'block';
     }
 
@@ -264,6 +519,41 @@
           target.scrollIntoView({ behavior: 'smooth' });
         }
       });
+    });
+
+    // Mobile nav toggle
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Pricing toggle
+    let annualMode = false;
+    const prices = {
+      biz: { monthly: '₽ 990', annual: '₽ 792' },
+      team: { monthly: '₽ 2 490', annual: '₽ 1 992' },
+    };
+
+    function setAnnual(val) {
+      annualMode = val;
+      const mode = val ? 'annual' : 'monthly';
+      document.getElementById('price-biz').innerHTML = prices.biz[mode] + ' <span>/мес</span>';
+      document.getElementById('price-team').innerHTML = prices.team[mode] + ' <span>/мес</span>';
+      document.getElementById('togMonthly').classList.toggle('active', !val);
+      document.getElementById('togAnnual').classList.toggle('active', val);
+      document.getElementById('togKnob').style.transform = val ? 'translateX(20px)' : 'translateX(0)';
+    }
+
+    // Navbar scroll shadow
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10);
     });
   </script>
 </body>
